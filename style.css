@@ -6,7 +6,10 @@
     --lightGreen: #80bd27;
     --goldenBrown: #e2c998;
     --pinkMilk: #faf5f2;
+
 }
+
+
 
 
 *{
@@ -55,7 +58,6 @@
     display: flex;
     padding: 0 120px;
     justify-content: space-between;
-
 }
 
 .navbar-container--logo{
@@ -80,6 +82,16 @@
     margin: 0 20px;
 }
 
+.nav-link{
+    text-decoration: none;
+    text-align: center;
+    color: #8c968a;
+}
+
+.active{
+    color: var(--darkerGreen) !important;
+}
+
 .navbar-btn{
     background: var(--lightGreen);
     align-self: center;
@@ -101,6 +113,17 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.introduce-cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkerGreen);
+    opacity: 0.3;
+  }
 
 .introduce-cover h1{
     color: white;
