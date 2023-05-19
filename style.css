@@ -56,7 +56,7 @@
 
 .navbar-container{
     display: flex;
-    padding: 0 120px;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -64,10 +64,12 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: auto;
 }
 
 .navbar-menu{
     display: flex;
+    margin: auto;
 }
 
 .menu-listItem{
@@ -103,6 +105,10 @@
 }
 
 /* ################### MAIN ################## */
+
+.main-container{
+    width: 100%;
+}
 
 .introduce-cover{
     position: relative;
@@ -142,18 +148,18 @@
 }
 
 .introduce-image{
-    display: flex;
-    justify-content: space-between;
-    padding: 60px 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 60px;
 }
 
 .imageAnimate{
     height: 225px;
     width: 265px;
-    /* background-image: url(image/slide.png); */
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
+    justify-self: center;
 }
 
 .img-first{
@@ -178,11 +184,12 @@
 }
 
 .video{
-    height: 430px;
     width: 50%;
-    background-image: url(image/img-video.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
+}
+
+.video img{
+    width: 100%;
+    height: 100%;
 }
 
 .descript{
@@ -387,8 +394,7 @@
 
 .footer-socialNetwork{
     display: flex;
-    padding: 0 530px;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -400,7 +406,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 50px 0px;
+    margin: 50px 10px;
 }
 
 .social a{
@@ -422,6 +428,37 @@
 
 .footer-temp span{
     color:var(--lightGreen);
+}
+
+/* ############ REPONSIVE ############ */
+@media (max-width: 1248px){
+    .introduce-image{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3vw;
+    }
+
+    .imageAnimate{
+        height: calc(225px + 5vw);
+        width: calc(265px + 5vw);
+    }
+}
+
+@media (max-width: 1031px) {
+    .navbar-container{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px){
+    .introduce-image{
+        grid-template-columns: 1fr;
+    }
+
+    .imageAnimate{
+        height: calc(225px + 10vw);
+        width: calc(265px + 10vw);
+
+    }
 }
 
 
