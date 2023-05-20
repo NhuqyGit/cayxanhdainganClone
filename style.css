@@ -185,6 +185,7 @@
 
 .video{
     width: 50%;
+    display: flex;
 }
 
 .video img{
@@ -193,10 +194,17 @@
 }
 
 .descript{
+    display: flex;
+    flex-direction: column;
     width: 50%;
-    padding: 60px;
+    /* padding: 5%; */
     background: var(--darkerGreen);
     color: #c5cac4;
+    justify-content: center;
+}
+
+.descript-container{
+    padding: 5% 6%;
 }
 
 .line{
@@ -229,7 +237,7 @@
 }
 
 .custComply{
-    padding: 65px 58px;
+    padding: 13% 12%;
 }
 
 .custComply p{
@@ -303,11 +311,15 @@
     background: var(--grayGreen);
 }
 
+.operate-first{
+    display: flex;
+    flex-direction: column;
+}
+
 .operate-first--descript{
-    /* display: flex;
-    justify-content: space-around; */
     margin-top: 25px;
-    padding: 0 320px;
+    width: min(500px, 70%);
+    align-self: center;
 }
 
 .operate-second{
@@ -431,7 +443,7 @@
 }
 
 /* ############ REPONSIVE ############ */
-@media (max-width: 1248px){
+@media (max-width: 1247px){
     .introduce-image{
         grid-template-columns: repeat(2, 1fr);
         row-gap: 3vw;
@@ -443,13 +455,13 @@
     }
 }
 
-@media (max-width: 1031px) {
+@media (max-width: 1030px) {
     .navbar-container{
         margin-bottom: 10px;
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
     .introduce-image{
         grid-template-columns: 1fr;
     }
@@ -457,6 +469,16 @@
     .imageAnimate{
         height: calc(225px + 10vw);
         width: calc(265px + 10vw);
+
+    }
+
+    .introduce-video{
+        flex-direction: column;
+    }
+
+    .video, .descript{
+        align-self: center;
+        width: 100%;
 
     }
 }
