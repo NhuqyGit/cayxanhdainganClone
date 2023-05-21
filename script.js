@@ -7,7 +7,7 @@ var blogLink = document.querySelector('a[href="#blog"');
 homeLink.addEventListener("click", ()=>{
     setActive(homeLink);
 });
-
+a
 introduceLink.addEventListener("click", ()=>{
     setActive(introduceLink);
 });

@@ -21,16 +21,14 @@
 
 .header-contactInfo{
     display: flex;
-    justify-content: space-between;
-    padding: 12px 100px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 12px;
     background: #f2f8ec;
     font-size: 14px;
     color: var(--darkerGreen);
     font-weight: bold;
-}
-
-.location-headquarter{
-    margin-left: 30px;
 }
 
 .header-contactInfo i{
@@ -40,6 +38,7 @@
 .consultant{
     display: flex;
     /* justify-content: space; */
+    flex-wrap: wrap;
 }
 
 .consultant-hotline{
@@ -114,7 +113,7 @@
     position: relative;
     width: 100%;
     height: 265px;
-    background-position: 0 -110px;
+    background-position: center center;
     background-image: url(image/slide.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -141,7 +140,7 @@
 }
 
 .introduce-text{
-    padding: 70px 120px 0 120px;
+    padding: 8vw 10vw 0 10vw;
     color: #666666;
     font-style: italic;
     font-size: 18px;
@@ -329,7 +328,7 @@
 }
 
 .op-second{
-    padding: 0 50px;
+    padding: 0 3vw;
 }
 
 .op-second--img{
@@ -380,12 +379,12 @@
 }
 
 .footer-container--descript{
-    margin: 40px 0;
-    padding: 0 200px;
+    margin: 20px 0;
+    padding: 0 50px;
     color: #c5cac4;
 }
 
-.footer-navbar{
+/* .footer-navbar{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -402,7 +401,7 @@
 .navbar-item a{
     text-decoration: none;
     color: white;
-}
+} */
 
 .footer-socialNetwork{
     display: flex;
@@ -429,13 +428,10 @@
     font-size: 14px;
     padding: 20px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background: #0a3000;
-}
-
-.tmp{
-    margin-right: 300px;
 }
 
 .footer-temp span{
@@ -481,10 +477,101 @@
         width: 100%;
 
     }
+
+    /* ############## MENU ############# */
+    .menu-listItem{
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 20px;
+    }
+
+    /* ############## CUSTOMPLY ############### */
+    .introduce-custComply{
+        grid-template-columns: 1fr;
+    }
+
+    .custComply{
+        padding: 5%;
+    }
+
+    .totals{
+        justify-content: space-around;
+    }
+
+    .commit-sign img{
+        width: 55%;
+    }
+
+    .custComply-require button, .custComply-require input{
+        width: 100%;
+    } 
+
+
+    /* ############## OPERATE ############### */
+
+    .operate-second{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "item1 item2"
+            "item3 item3";
+    }
+
+    .operate-second--consultant{
+        grid-area: item1;
+    }
+    
+    .operate-second--work{
+        grid-area: item2;
+    }
+    
+    .operate-second--complete{
+        grid-area: item3;
+        padding: 3vw calc(3vw + 18%);
+    }
 }
 
 
+@media (max-width: 571px){
+    .operate-second{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "item1"
+            "item2"
+            "item3";
+    }
 
+    .op-second{
+        padding: 0 3vw;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 461px){
+    .consultant div{
+        padding: 0;
+    }
+
+    .header-contactInfo{
+        justify-content: start;
+    }
+
+    .footer-container img{
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media (max-width: 425px){
+    .imageAnimate{
+        height: 50vw;
+        width: 55vw;
+    }
+
+    .introduce-image{
+        padding: 20px;
+        row-gap: 20px;
+    }
+}
 
 
 
