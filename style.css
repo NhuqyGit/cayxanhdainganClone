@@ -571,6 +571,10 @@
         padding: 20px;
         row-gap: 20px;
     }
+
+    .introduce-cover h1{
+        font-size: 35px;
+    }
 }
 
 
