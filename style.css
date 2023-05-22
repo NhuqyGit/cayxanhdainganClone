@@ -105,6 +105,62 @@
 
 /* ################### MAIN ################## */
 
+@keyframes appear-img{
+    0% { 
+        opacity: 0;
+        transform: translateX(-25%);
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear-customer{
+    0% { 
+        opacity: 0;
+        transform: translateX(-75%);
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear-require{
+    0% { 
+        opacity: 0;
+        transform: translateX(75%);
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear-des{
+    0% { 
+        opacity: 0;
+        transform: translateX(25%);
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .main-container{
     width: 100%;
 }
@@ -180,16 +236,33 @@
 
 .introduce-video{
     display: flex;
+    background: var(--darkerGreen);
 }
 
 .video{
     width: 50%;
     display: flex;
+    opacity: 0;
+    transform: translateX(-25%);
 }
 
 .video img{
     width: 100%;
     height: 100%;
+    /* animation: appear-img 1.2s ease-in-out forwards; */
+}
+
+.animate-img{
+    animation: appear-img 1.5s ease-in-out forwards;
+}
+.animate-des{
+    animation: appear-des 1.5s ease-in-out forwards;
+}
+.animate-customer{
+    animation: appear-customer 1.2s ease-in-out 1s forwards;
+}
+.animate-require{
+    animation: appear-require 1.2s ease-in-out 1s forwards;
 }
 
 .descript{
@@ -204,6 +277,8 @@
 
 .descript-container{
     padding: 5% 6%;
+    opacity: 0;
+    transform: translateX(25%);
 }
 
 .line{
@@ -261,6 +336,16 @@
 .totals p{
     font-size: 13px;
     font-weight: bold;
+}
+
+.custComply-customer{
+    opacity: 0;
+    transform: translateX(-75%);
+}
+
+.custComply-require{
+    opacity: 0;
+    transform: translateX(75%);
 }
 
 .custComply-commit{

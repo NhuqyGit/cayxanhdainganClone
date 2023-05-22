@@ -7,7 +7,7 @@ var blogLink = document.querySelector('a[href="#blog"');
 homeLink.addEventListener("click", ()=>{
     setActive(homeLink);
 });
-a
+
 introduceLink.addEventListener("click", ()=>{
     setActive(introduceLink);
 });
@@ -23,6 +23,29 @@ constructLink.addEventListener("click", ()=>{
 blogLink.addEventListener("click", ()=>{
     setActive(blogLink);
 });
+
+window.addEventListener("scroll", scrollAnimate);
+
+function scrollAnimate(){
+    var introVideo = document.querySelector(".video");
+    var introDes = document.querySelector(".descript-container")
+    var posVideo = introVideo.getBoundingClientRect().top;
+    
+    var custComplyCus = document.querySelector(".custComply-customer");
+    var custComplyRequire = document.querySelector(".custComply-require");
+    var posCustComply = custComplyCus.getBoundingClientRect().top;
+
+    var windowHeight = window.innerHeight;
+    console.log(windowHeight);
+    if (posVideo < windowHeight) {
+        introVideo.classList.add("animate-img");
+        introDes.classList.add("animate-des");
+    }
+    if(posCustComply < windowHeight){
+        custComplyCus.classList.add("animate-customer");
+        custComplyRequire.classList.add("animate-require");
+    }
+}
 
 
 function setActive(ele){
