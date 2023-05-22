@@ -237,6 +237,7 @@
 .introduce-video{
     display: flex;
     background: var(--darkerGreen);
+    overflow: hidden;
 }
 
 .video{
